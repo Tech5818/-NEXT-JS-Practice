@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ChakraProviders } from 'ChakraProviders'
+import { Header } from './_components/_server/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <ChakraProviders>
+          <Header/>
           {children}
         </ChakraProviders>
       </body>
